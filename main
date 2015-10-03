@@ -1,0 +1,66 @@
+package Friends;
+
+import java.util.Scanner;
+
+/**
+ * Created by Princess Of Persia on 03/10/2015.
+ */
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("soyez les bienvenus dans notre petit programe :)");
+        System.out.println("cree un compte svp");
+
+        Personne p = new Personne();
+        p.Compte();
+
+
+        boolean rep = true;
+        String ans = null;
+        String o = "o";
+        System.out.println("**** Voici Ta liste D'amis ****");
+        p.CreeListAmis();
+        p.MaListAmis();
+        p.afficheMaListAmis();
+
+        do {
+            System.out.println("\nvoici une liste de personne que vous pourriez connaitre");
+            p.afficheListAmisPourAjouter();
+            System.out.println("\nvoulez vous ajouter quelqu'un (o/n)");
+            ans = scanner.next();
+            if(ans.equals(o)) {
+
+                p.AjouterAmis(p);
+                System.out.println("veux tu ajouter un autre ami(o/n)");
+                ans = scanner.next();
+            }
+
+            else {
+                System.out.println("************ Amis ************");
+                p.afficheMaListAmis();
+            }
+
+
+
+            rep = ans.equals(o);
+        }while(rep);
+
+        System.out.println("\n******** Tes Amis Sont :) ********");
+        p.afficheMaListAmis();
+
+        p.DifferentsAmis();
+        System.out.println("\n*** Tes Amis Algriens sont :D ****");
+        p.AmisAlgeriens();
+
+        System.out.println("\n*** Tes Amis Etrangers Sont :3 ***");
+        p.AmisEtrangers();
+    }
+
+   /* @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        else return false;
+    }*/
+}
