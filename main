@@ -31,7 +31,7 @@ public class Main {
             ans = scanner.next();
             if(ans.equals(o)) {
 
-                p.AjouterAmis(p);
+                p.AjouterAmis();
                 System.out.println("veux tu ajouter un autre ami(o/n)");
                 ans = scanner.next();
             }
