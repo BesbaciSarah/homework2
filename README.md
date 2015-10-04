@@ -88,7 +88,7 @@ public class Personne {
         Amis.add(new Personne("Miley","Forchten","Italienne",18));
     }
 
-    public void AjouterAmis(Personne P){
+    public void AjouterAmis(){
         System.out.println("quel amis veux tu ajouter?");
         int choix = scanner.nextInt();
 
